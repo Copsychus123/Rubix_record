@@ -1,26 +1,70 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Colors - Japanese Off-White (Zen Minimalist) Palette */
+  /* Backgrounds: Warm, natural rice paper tones */
+  --color-bg-primary: #FFF9F5;
+  --color-bg-secondary: #F5EDE0;
+  
+  /* Text: Softer ink tones, avoiding harsh black */
+  --color-text-primary: #3D4752;  /* 鉄御納戸 (Tetsuonando) - Iron Blue/Grey */
+  --color-text-secondary: #6B7785; /* 藍鼠 (Ainezu) - Blue Grey */
+  --color-text-muted: #9EAAB7;    /* 薄雲鼠 (Usukumonezu) */
+  
+  /* Brand: Professional yet muted Blue/Grey */
+  --color-brand-primary: #1E3A8A;
+  --color-brand-accent: #D97706;
+  
+  /* Surfaces & Borders */
+  --color-surface-variant: #EBE9E1;
+  --color-surface-container: #F2F0E9;
+  --color-surface-container-high: #E6E2D6;
+  
+  --color-border-strong: #C5C0B5; /* 灰白 (Kaihakushoku) */
+  --color-border-subtle: #EBE9E1;
+  
+  /* States */
+  --color-state-success: #6B8E23; /* Olive Green - More natural */
+  --color-state-warning: #D2691E; /* Chocolate/Orange */
+  --color-state-error: #CD5C5C;   /* Indian Red - Softer error */
+  
+  --color-focus-ring: #1E3A8A;
+
+  /* Typography */
+  --font-sans: "Roboto Flex", "Google Sans", "Noto Sans JP", "Roboto", sans-serif;
+  --font-display: "Google Sans Display", "Noto Sans JP", "Roboto", sans-serif;
+
+  /* Radius - Slightly softer/organic */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Animation - Slower, calmer breathing */
+  --animate-fade-in: fadeIn 600ms cubic-bezier(0.2, 0, 0, 1);
+  --animate-slide-up: slideUp 800ms cubic-bezier(0.2, 0, 0, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--color-bg-primary);
+    --foreground: var(--color-text-primary);
+  }
+
+  body {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
