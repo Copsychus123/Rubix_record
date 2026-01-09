@@ -19,9 +19,7 @@
 
 # production
 /build
-/docs
-/scripts
-/tests
+
 
 
 # misc
@@ -53,6 +51,9 @@ yarn-error.log*
 /.backup/
 /.cleanup_logs/
 /.quarantine/
+/.docs/
+/.scripts/
+/.tests/
 
 # typescript
 *.tsbuildinfo
