@@ -24,7 +24,7 @@ export default function CTASection() {
             立即加入體驗
           </a>
           <a
-            href="mailto:hello@b2brubix.com"
+            href="mailto:t112c72007@ntut.org.tw"
             className="w-full sm:w-auto inline-block px-6 py-3 rounded-[8px] border border-border-strong text-text-primary hover:bg-surface-variant/40 transition-colors"
           >
             機構合作諮詢
