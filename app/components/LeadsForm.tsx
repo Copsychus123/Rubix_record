@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { supabase } from '@/lib/supabase';
+import { getSupabaseClient } from '../database/supabase';
 import { Loader2, CheckCircle2, AlertCircle, ArrowRight } from 'lucide-react';
 import { z } from 'zod';
 
@@ -34,6 +34,11 @@ export default function LeadsForm({ source = 'web' }: LeadsFormProps) {
     }
 
     try {
+      const supabase = getSupabaseClient();
+      if (!supabase) {
+        throw new Error('Supabase 未設定，請檢查環境變數');
+      }
+
       const { error } = await supabase
         .from('leads')
         .insert([{ 
@@ -52,9 +57,10 @@ export default function LeadsForm({ source = 'web' }: LeadsFormProps) {
       setStatus('success');
       setMessage('成功加入！我們將盡快與您聯繫。');
       setFormData({ name: '', email: '' });
-    } catch (err: any) {
+    } catch (err: unknown) {
       setStatus('error');
-      setMessage(err.message || '發生錯誤，請稍後再試。');
+      const message = err instanceof Error ? err.message : '發生錯誤，請稍後再試。';
+      setMessage(message);
     }
   };
 

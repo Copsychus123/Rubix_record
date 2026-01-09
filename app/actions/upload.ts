@@ -41,8 +41,9 @@ export async function getPresignedUrl(
     const url = await getSignedUrl(s3Client, command, { expiresIn: 3600 });
 
     return { success: true, url, key: uniqueKey };
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error generating presigned URL:', error);
-    return { success: false, error: error.message };
+    const message = error instanceof Error ? error.message : 'Unknown error';
+    return { success: false, error: message };
   }
 }

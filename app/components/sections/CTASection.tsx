@@ -1,5 +1,5 @@
 
-import LeadsForm from "@/components/LeadsForm";
+import LeadsForm from "../LeadsForm";
 
 export default function CTASection() {
   return (

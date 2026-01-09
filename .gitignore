@@ -19,6 +19,9 @@
 
 # production
 /build
+/docs
+/scripts
+
 
 # misc
 .DS_Store
@@ -44,6 +47,11 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# cleanup artifacts
+/.backup/
+/.cleanup_logs/
+/.quarantine/
 
 # typescript
 *.tsbuildinfo

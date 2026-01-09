@@ -60,10 +60,11 @@ export default function UploadPage() {
 
       setStatus('success');
       setFile(null); // Clear file after success
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('Upload failed:', error);
       setStatus('error');
-      setErrorMessage(error.message || '上傳過程中發生錯誤');
+      const message = error instanceof Error ? error.message : '上傳過程中發生錯誤';
+      setErrorMessage(message);
     }
   };
 

@@ -1,8 +1,8 @@
 
-import DemoSection from "@/components/DemoSection";
-import FAQ from "@/components/FAQ";
-import HeroSection from "@/components/sections/HeroSection";
-import CTASection from "@/components/sections/CTASection";
+import DemoSection from "./components/DemoSection";
+import FAQ from "./components/FAQ";
+import HeroSection from "./components/sections/HeroSection";
+import CTASection from "./components/sections/CTASection";
 
 export default function Home() {
   return (
