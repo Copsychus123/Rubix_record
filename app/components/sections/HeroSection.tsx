@@ -1,17 +1,7 @@
 
 export default function HeroSection() {
   return (
-    <section className="relative px-4 pt-20 pb-16 md:pt-32 md:pb-24 overflow-hidden">
-      <div
-        className="absolute inset-0 -z-10 opacity-80"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1731440488849-82a3b0b9f1f7?q=80&w=1920&auto=format&fit=crop')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          filter: "blur(2px)",
-        }}
-      />
+    <section className="relative px-4 pt-20 pb-16 md:pt-32 md:pb-24 overflow-hidden bg-bg-primary">
       <div className="container mx-auto max-w-5xl text-center relative z-10">
         <h1 className="text-[32px] md:text-[40px] font-normal tracking-tight mb-6 animate-slide-up text-brand-primary">
           讓照護專業回歸服務，<br className="md:hidden" />而非淹沒在文書裡

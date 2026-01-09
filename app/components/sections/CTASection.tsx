@@ -3,8 +3,8 @@ import LeadsForm from "../LeadsForm";
 
 export default function CTASection() {
   return (
-    <section id="waitlist" className="px-4 py-20 bg-bg-secondary/40">
-      <div className="container mx-auto max-w-4xl text-center">
+    <section id="waitlist" className="relative px-4 py-20 overflow-hidden bg-bg-primary">
+      <div className="container mx-auto max-w-4xl text-center relative z-10">
         <div className="mb-12">
           <p className="italic text-text-secondary max-w-3xl mx-auto text-lg">
             「最大的改變是心態。以前錄音是為了怕忘記，現在錄音就是為了完成工作。Rubix AI 讓我可以把專注力完全放在長者身上。」

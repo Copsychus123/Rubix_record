@@ -64,7 +64,7 @@ export default function DemoSection() {
   };
 
   return (
-    <section className="px-4 py-20 bg-bg-secondary/50">
+    <section className="px-4 py-20 bg-bg-secondary">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-accent/10 text-brand-accent text-sm font-medium mb-4">
